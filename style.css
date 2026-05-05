@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #FFFDF5 0%, #F5E8C7 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    padding: 40px 32px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 70px rgba(0,0,0,0.15);
+}
+
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    background: linear-gradient(135deg, #FFE4B5, #FFDAB9);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape1 {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.shape2 {
+    width: 40px;
+    height: 40px;
+    top: 40px;
+    right: 30px;
+    animation-delay: 2s;
+}
+
+.shape3 {
+    width: 30px;
+    height: 30px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #6B7280, #4B5563);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #6B7280;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.message {
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+
+.date-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.date-card {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.date-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.date-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(253, 230, 138, 0.3);
+    border-color: #FCD34D;
+}
+
+.date-card:hover::before {
+    left: 100%;
+}
+
+.date-card.selected {
+    background: linear-gradient(135deg, #FCD34D 0%, #FBBF24 100%);
+    border-color: #F59E0B;
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(251, 191, 36, 0.4);
+}
+
+.date-card.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    background: #22C55E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.date-info {
+    font-size: 14px;
+    color: #6B7280;
+    margin-top: 4px;
+}
+
+.date-time {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.hint {
+    font-size: 13px;
+    color: #9CA3AF;
+    font-weight: 300;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 32px 24px;
+        margin: 10px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .date-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
