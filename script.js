@@ -50,7 +50,7 @@ class ConfessionSite {
     redirectToWhatsApp() {
         if (!this.selectedDate) return;
         
-        const message = `Hey! I picked ${this.selectedDate.full} for our meetup 😊 Can we do Google Meet then?`;
+        const message = `Halo ganteng! I picked ${this.selectedDate.full} for our meetup 😊 Can we do Google Meet then?`;
         const encodedMessage = encodeURIComponent(message);
         const waUrl = `https://wa.me/${this.waNumber}?text=${encodedMessage}`;
         
