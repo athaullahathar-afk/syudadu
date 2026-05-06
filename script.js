@@ -3,9 +3,9 @@ class ConfessionSite {
         this.dates = [
             { day: 'Thu, 10 May', time: '10:00 WITA', full: 'Sunday, May 10th at 10:00 WITA' },
             { day: 'Wed, 13 May', time: '10:00 WITA', full: 'Wednesday, May 13th at 10:00 WITA' },
-            { day: 'Mon, 14 May', time: '10:00 WITA', full: 'Thursday, MAy 14th at 10:00 WITA' },
-            { day: 'Wed, 15 May', time: '10:00 WITA', full: 'Friday, May 15th at 10:00 WITA' },
-            { day: 'Wed, 16 May', time: '10:00 WITA', full: 'Saturday, May 16th at 10:00 WITA' }
+            { day: 'Thu, 14 May', time: '10:00 WITA', full: 'Thursday, May 14th at 10:00 WITA' },
+            { day: 'Fri, 15 May', time: '10:00 WITA', full: 'Friday, May 15th at 10:00 WITA' },
+            { day: 'Sat, 16 May', time: '10:00 WITA', full: 'Saturday, May 16th at 10:00 WITA' }
         ];
         this.selectedDate = null;
         this.waNumber = '+6285701037489'; 
