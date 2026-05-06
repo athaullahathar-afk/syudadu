@@ -1,7 +1,7 @@
 class ConfessionSite {
     constructor() {
         this.dates = [
-            { day: 'Thu, 10 May', time: '10:00 WITA', full: 'Sunday, May 10th at 10:00 WITA' },
+            { day: 'Sun, 10 May', time: '10:00 WITA', full: 'Sunday, May 10th at 10:00 WITA' },
             { day: 'Wed, 13 May', time: '10:00 WITA', full: 'Wednesday, May 13th at 10:00 WITA' },
             { day: 'Thu, 14 May', time: '10:00 WITA', full: 'Thursday, May 14th at 10:00 WITA' },
             { day: 'Fri, 15 May', time: '10:00 WITA', full: 'Friday, May 15th at 10:00 WITA' },
