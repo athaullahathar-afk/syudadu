@@ -2,9 +2,10 @@ class ConfessionSite {
     constructor() {
         this.dates = [
             { day: 'Thu, 10 May', time: '9:00 PM', full: 'Sunday, May 10th at 9:00 PM' },
-            { day: 'Sat, 15 May', time: '9:00 PM', full: 'Friday, May 15th at 9:00 PM' },
-            { day: 'Mon, 16 May', time: '9:30 PM', full: 'Saturday, MAy 16th at 9:00 PM' },
-            { day: 'Wed, 17 May', time: '9:00 PM', full: 'Sunday, May 17th at 9:00 PM' }
+            { day: 'Sat, 13 May', time: '9:00 PM', full: 'Friday, May 15th at 9:00 PM' },
+            { day: 'Mon, 14 May', time: '9:00 PM', full: 'Saturday, MAy 16th at 9:00 PM' },
+            { day: 'Wed, 15 May', time: '9:00 PM', full: 'Sunday, May 17th at 9:00 PM' }
+            { day: 'Wed, 16 May', time: '9:00 PM', full: 'Sunday, May 17th at 9:00 PM' }
         ];
         this.selectedDate = null;
         this.waNumber = '+6285701037489'; // GANTI INI SAMA NOMOR WA LU (format internasional)
